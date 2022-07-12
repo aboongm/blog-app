@@ -1,24 +1,79 @@
-# blog-app
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I am going to build the Blog app for three weeks. Here is the list of projects that will guide me through the steps described above. 
 
-Things you may want to cover:
+Project 1: Creating a data model.
+Project 2: Validations and Model specs.
+Project 3: Processing data in models.
+Project 4: Setup and controllers.
+Project 5: Controllers specs.
+Project 6: Views.
+Project 7: Forms.
+Project 8: Integration specs for Views and fixing n+1 problems.
+Project 9: Add Devise.
+Project 10: Add authorization rules.
+Project 11: Add API endpoints.
+Exercise: API documentation.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Ruby On Rails
+- RSpec
+- PostgreSQL
 
-* Configuration
+## Getting Started
 
-* Database creation
+To get a local copy up and running follow these simple example steps.
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+- A source-code editor (preferably Visual Studio Code)
 
-* Services (job queues, cache servers, search engines, etc.)
+### Install
 
-* Deployment instructions
+- Ruby
+- Rails
+- PostgreSQL
 
-* ...
+### Using it Locally
+
+- Clone the project
+
+git clone https://github.com/aboongm/blog-app.git
+
+cd blog-app
+
+- To Start the programs
+
+open terminal
+run the command $irb (interactive ruby shell)
+run the program functions
+
+
+## Authors
+
+👤 **Ranjit Luwang**
+
+- GitHub: [@aboongm](https://github.com/aboongm)
+- Twitter: [@John_luang1](https://twitter.com/John_luang1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aboongm)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse 
+
+## 📝 License
+
+This project is [MIT](./LICENSE.md) licensed.
