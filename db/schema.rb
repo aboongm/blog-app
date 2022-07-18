@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_105029) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string "text"
+    t.text "text"
     t.bigint "author_id"
     t.bigint "post_id"
     t.datetime "created_at", null: false
@@ -36,19 +36,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_105029) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "text"
-    t.bigint "comment_counter"
-    t.bigint "likes_counter"
+    t.integer "comments_counter"
+    t.integer "likes_counter"
     t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "photo"
     t.string "bio"
-    t.bigint "posts_counter"
-    t.bigint "author_id"
+    t.integer "posts_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,5 +58,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_12_105029) do
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users", column: "author_id"
   add_foreign_key "posts", "users", column: "author_id"
-  add_foreign_key "users", "users", column: "author_id"
 end
