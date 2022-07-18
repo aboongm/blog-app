@@ -105,7 +105,9 @@ body {
   text-decoration: none !important;
 }
 
-.post-text, .post-text-1, .post-text-2 {
+.post-text,
+.post-text-1,
+.post-text-2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -161,7 +163,8 @@ body {
   border-radius: 4px;
 }
 
-.post-info, .comment-info {
+.post-info,
+.comment-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
