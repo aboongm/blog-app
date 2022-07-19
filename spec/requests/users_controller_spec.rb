@@ -28,6 +28,9 @@ RSpec.describe 'Users Controller', type: :request do
         expect(response).to render_template('show')
         expect(response.body).to render_template('show')
       end
+      it "includes see all posts" do
+        expect(response.body).to include('See all posts')
+      end
     end
   end
 end
