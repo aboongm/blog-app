@@ -13,6 +13,9 @@ RSpec.describe 'Users Controller', type: :request do
         expect(response).to render_template('index')
         expect(response.body).to render_template('index')
       end
+      it 'includes number of posts' do
+        expect(response.body).to include('Number of posts')
+      end
     end
   end
 
