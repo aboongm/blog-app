@@ -137,7 +137,6 @@ a {
 
 .comment-text {
   display: flex;
-  flex: column;
   justify-content: flex-end;
   width: 100%;
 }
