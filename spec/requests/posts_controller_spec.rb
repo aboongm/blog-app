@@ -25,7 +25,7 @@ RSpec.describe 'PostsController', type: :request do
       it 'returns a 200 status code and render template for show' do
         get '/users/1/posts', params: { id: 1 }
         expect(response.body).to include('post')
-      end      
+      end
     end
   end
 end
