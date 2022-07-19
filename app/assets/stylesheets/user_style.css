@@ -135,6 +135,13 @@ a {
   width: 100%;
 }
 
+.comment-text {
+  display: flex;
+  flex: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .counters {
   text-align: right;
   font-family: Arial, Helvetica, sans-serif;
@@ -182,5 +189,4 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  padding: 10px 0 0 0;
 }
