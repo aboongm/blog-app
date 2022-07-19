@@ -54,6 +54,7 @@ gem 'ffi', github: 'ffi/ffi', submodules: true
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
 
