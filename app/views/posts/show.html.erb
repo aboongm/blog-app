@@ -19,6 +19,8 @@
                 </p>
             </div>            
         <% end %>
-    </div>   
+    </div>
+
+    <%= button_to "Add new comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "button" %>
 </section>
 
