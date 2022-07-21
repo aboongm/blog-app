@@ -1,15 +1,10 @@
 <section class="container">
     <p class="post-title">Add New Comment :</p>
-    <%= form_with model: @comment, url: user_post_comment_path, method: :post, local: true, class: "form-control" do |form| %>
+    <%= form_with model: @comment, url: user_post_comments_path, method: :post, local: true, class: "form-control" do |form| %>
     
-    <div class="mb-3 mt-3">
-        <%= form.label :title %>
-        <%= form.text_field :title, placeholder: "Title", required: true, class: "form-post-title" %>        
-    </div>
-
     <div>
         <%= form.label :text %>
-        <%= form.text_area :text, placeholder: "Type your post here!", rows: 20, required: true,  class: "form-post-text" %>        
+        <%= form.text_area :text, placeholder: "Type your comment here!", rows: 20, required: true,  class: "form-post-text" %>        
     </div>
 
     <div>
