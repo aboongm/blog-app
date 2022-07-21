@@ -16,7 +16,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    puts "Post params::: #{params[:post]}"
     @post = Post.new(post_params)
     @post.author_id = current_user.id
 
