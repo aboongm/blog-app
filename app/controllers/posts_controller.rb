@@ -16,12 +16,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    # @post = Post.new(title: params[:post][:title], text: params[:post][:text], comments_counter: 0, likes_counter: 0)
+    puts "Post params::: #{params[:post]}"
     @post = Post.new(post_params)
     @post.author_id = current_user.id
 
     respond_to do |format|
-      if @post.save!
+      if @post.save
         format.html { redirect_to user_post_url(current_user, @post), notice: 'Post was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }

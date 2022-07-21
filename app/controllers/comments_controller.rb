@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @post = Post.find(params[:post_id] || params[:id])
+    @post = Post.find(params[:post_id] || params[:id])    
     @comment = Comment.new(text: params[:comment][:text], post_id: @post.id, author_id: current_user.id)
     @comment.author_id = current_user.id
 
@@ -19,11 +19,12 @@ class CommentsController < ApplicationController
       end
     end
 
-    # rubocop:disable Lint/NestedMethodDefinition
-    def comment_params
-      params.require(:comment).permit(:text)
-    end
-
-    # rubocop:enable Lint/NestedMethodDefinition
   end
+  private
+  # rubocop:disable Lint/NestedMethodDefinition
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
+
+  # rubocop:enable Lint/NestedMethodDefinition
 end
