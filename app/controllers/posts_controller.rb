@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[show edit update destroy]
 
   def index
     @user = current_user
     @posts = @user.posts
   end
-  
-    def show
-      @post = Post.find(params[:id])
-    end
+
+  def show
+    @post = Post.find(params[:id])
+  end
 
   def new
     @post = Post.new
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save!
-        format.html { redirect_to user_post_url(current_user, @post), notice: "Post was successfully created." }
+        format.html { redirect_to user_post_url(current_user, @post), notice: 'Post was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -29,9 +29,10 @@ class PostsController < ApplicationController
   end
 
   private
-   def set_post
-      @post = Post.find(params[:id])
-    end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
   def post_params
     params.require(:post).permit(:title, :text, :comments_counter, :likes_counter)
