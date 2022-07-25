@@ -17,7 +17,6 @@ RSpec.describe 'posts#index', type: :feature do
                                  post: Post.first)
       @comment2 = Comment.create(text: 'Comment 2!', author: User.first, post: Post.first)
       @comment3 = Comment.create(text: 'Comment 2!', author: User.first, post: Post.first)
-
     end
 
     it "shows user's profile picture" do
