@@ -3,22 +3,20 @@ require 'rails_helper'
 RSpec.describe 'Post show', type: :feature do
   describe 'Post' do
     before(:each) do
-      # @user1 = User.create(name: 'Margaret', photo: 'margaret.png', bio: 'bio', posts_counter: 0)
-      # @user2 = User.create(name: 'David', photo: 'margaret.png', bio: 'bio', posts_counter: 0)
-
-      @first_user = User.create(name: 'Tom', photo: 'margaret.jpeg', bio: 'Teacher from Mexico.')
-      @second_user = User.create(name: 'Lilly', photo: 'margaret.jpeg', bio: 'Teacher from Poland.')
-
+      @first_user = User.create(name: 'Tom', photo: 'margaret.jpeg', bio: 'Teacher from Mexico.', posts_counter: 0)
+      @first_user.save!
+      @second_user = User.create(name: 'Lilly', photo: 'margaret.jpeg', bio: 'Teacher from Poland.', posts_counter: 0)
+      @second_user.save!
       visit root_path
 
       @first_post = Post.create(author: @first_user, title: 'Hello', text: 'This is my first post',
-                                comments_counter: 0, like_counter: 0)
+                                comments_counter: 0, likes_counter: 0)
       @second_post = Post.create(author: @first_user, title: 'Hello, again', text: 'This is my second post',
-                                 comments_counter: 0, like_counter: 0)
+                                 comments_counter: 0, likes_counter: 0)
       @third_post = Post.create(author: @second_user, title: 'Hello', text: 'This is my first post',
-                                comments_counter: 0, like_counter: 0)
+                                comments_counter: 0, likes_counter: 0)
       @fourth_post = Post.create(author: @second_user, title: 'Hello, again', text: 'This is my second post',
-                                 comments_counter: 0, like_counter: 0)
+                                 comments_counter: 0, likes_counter: 0)
 
       @comment1 = Comment.create(post: Post.first, author: User.first, text: 'Hi Tom!')
       @comment2 = Comment.create(post: Post.first, author: User.first, text: 'Hi Tom Again!')
@@ -32,7 +30,7 @@ RSpec.describe 'Post show', type: :feature do
     end
 
     it 'shows the person who wrote the post' do
-      expect(page).to have_content('Margaret')
+      expect(page).to have_content('Tom')
     end
 
     it 'shows number of comments' do
@@ -42,7 +40,7 @@ RSpec.describe 'Post show', type: :feature do
 
     it 'shows number of likes' do
       post = Post.first
-      expect(page).to have_content(post.like_counter)
+      expect(page).to have_content(post.likes_counter)
     end
 
     it 'can see the post\'s body.' do
