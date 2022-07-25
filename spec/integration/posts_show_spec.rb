@@ -6,8 +6,8 @@ RSpec.describe 'Post show', type: :feature do
       # @user1 = User.create(name: 'Margaret', photo: 'margaret.png', bio: 'bio', posts_counter: 0)
       # @user2 = User.create(name: 'David', photo: 'margaret.png', bio: 'bio', posts_counter: 0)
 
-      @first_user = User.create(name: 'Tom', photo: 'margaret.png', bio: 'Teacher from Mexico.')
-      @second_user = User.create(name: 'Lilly', photo: 'margaret.png', bio: 'Teacher from Poland.')
+      @first_user = User.create(name: 'Tom', photo: 'margaret.jpeg', bio: 'Teacher from Mexico.')
+      @second_user = User.create(name: 'Lilly', photo: 'margaret.jpeg', bio: 'Teacher from Poland.')
 
       visit root_path
 
