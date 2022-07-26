@@ -41,6 +41,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.3.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.4.2, ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.18, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.12.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, ruby-3.1.2-p20) [gem]" level="application" />
@@ -50,6 +51,7 @@
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v4.1.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.10, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v4.8.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="digest (v3.1.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, ruby-3.1.2-p20) [gem]" level="application" />
@@ -73,6 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="net-smtp (v0.3.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.8, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.7, ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.22.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.1.2.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.4.1, ruby-3.1.2-p20) [gem]" level="application" />
@@ -89,6 +92,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.5.0, ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="responders (v3.0.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.11.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.11.0, ruby-3.1.2-p20) [gem]" level="application" />
@@ -111,6 +115,7 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2022.1, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v2.2.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uniform_notifier (v1.16.0, ruby-3.1.2-p20) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.9, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="web-console (v4.2.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webdrivers (v5.0.0, ruby-3.1.2-p20) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.9, ruby-3.1.2-p20) [gem]" level="application" />
@@ -127,12 +132,17 @@
     <option name="generators">
       <list>
         <option value="active_record:application_record" />
+        <option value="active_record:devise" />
         <option value="active_record:multi_db" />
         <option value="application_record" />
         <option value="benchmark" />
         <option value="bullet:install" />
         <option value="channel" />
         <option value="controller" />
+        <option value="devise" />
+        <option value="devise:controllers" />
+        <option value="devise:install" />
+        <option value="devise:views" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -142,7 +152,10 @@
         <option value="mailer" />
         <option value="migration" />
         <option value="model" />
+        <option value="mongoid:devise" />
         <option value="resource" />
+        <option value="responders:install" />
+        <option value="responders_controller" />
         <option value="rspec:channel" />
         <option value="rspec:controller" />
         <option value="rspec:feature" />
@@ -181,12 +194,17 @@
     <option name="myGenerators">
       <list>
         <option value="active_record:application_record" />
+        <option value="active_record:devise" />
         <option value="active_record:multi_db" />
         <option value="application_record" />
         <option value="benchmark" />
         <option value="bullet:install" />
         <option value="channel" />
         <option value="controller" />
+        <option value="devise" />
+        <option value="devise:controllers" />
+        <option value="devise:install" />
+        <option value="devise:views" />
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -196,7 +214,10 @@
         <option value="mailer" />
         <option value="migration" />
         <option value="model" />
+        <option value="mongoid:devise" />
         <option value="resource" />
+        <option value="responders:install" />
+        <option value="responders_controller" />
         <option value="rspec:channel" />
         <option value="rspec:controller" />
         <option value="rspec:feature" />
