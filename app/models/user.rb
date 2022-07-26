@@ -10,7 +10,15 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
+  after_initialize :set_defaults
+
   def recent_posts
     posts.order(created_at: :desc).limit(3)
+  end
+
+  private
+
+  def set_defaults
+    self.posts_counter ||= 0
   end
 end
