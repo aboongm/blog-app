@@ -20,7 +20,7 @@ class Post < ApplicationRecord
     author.increment!(:posts_counter)
   end
 
-   def update_posts_counter_on_destroy
+  def update_posts_counter_on_destroy
     author.update_columns('posts_counter' => author.posts_counter - 1)
   end
 end
