@@ -9,6 +9,7 @@
     <div class="comment-info">
         <% @post.recent_comments.each do |comment| %>
             <div>
+                <p class="post-title">Comments</p>
                 <p> 
                     <span>
                         <%= comment.author.name %>:
@@ -16,11 +17,17 @@
                     <span>
                         <%= comment.text %>
                     </span>
-                </p>
-            </div>            
+                </p>                
+            </div>
+            <% if can? :destroy, comment %>
+                <%= button_to "Delete", user_post_comment_path(@post.author, @post, comment), method: :delete, class: 'button' %>
+            <% end %>         
         <% end %>
     </div>
     <div class="button-user">
+        <% if can? :destroy, @post %>
+            <%= button_to "Delete Post", user_post_path(@post.author, @post), method: :delete, class: "button" %>
+        <% end %>
         <%= button_to "Back", user_path(@post.author, @post), method: :get, class: "button" %>
         <%= button_to "Add Comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "button" %>
         <div >
