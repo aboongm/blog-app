@@ -12,15 +12,6 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
-  #  def index
-  #   @user = current_user
-  #   @comments = @user.comments
-
-  #   respond_to do |format|
-  #     format.json { render json: @comments }
-  #   end
-  # end
-
   def create
     @comment = Comment.create(
       text: comment_params[:text],
