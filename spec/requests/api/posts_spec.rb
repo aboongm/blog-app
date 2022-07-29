@@ -24,8 +24,6 @@ describe 'Posts API' do
                    author_id: { type: :integer }
                  },
                  required: %w[id title text comments_counter likes_counter author]
-
-          let(:user_id) { User.create(name: 'foo', bio: 'bar', photo: 0, posts_counter: 0).id }
           run_test!
         end
       end
