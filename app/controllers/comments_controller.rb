@@ -6,8 +6,7 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.json { render json: @comments }
     end
-  end
-
+  end  
   def new
     @comment = Comment.new
     @user = current_user

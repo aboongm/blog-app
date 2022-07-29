@@ -1,4 +1,7 @@
 class Api::V1::CommentsController < ApiController
+  before_action :authorize_request
+  protect_from_forgery with: :null_session
+  
   def index
     @user = current_user
     @comments = @user.comments
