@@ -8,13 +8,4 @@ class Api::V1::PostsController < ApplicationController
       render json: @posts
     end
   end
-
-  #  def index
-  #   @user = current_user
-  #   @posts = @user.posts.includes(:comments)
-
-  #   respond_to do |format|
-  #     format.json { render json: @posts }
-  #   end
-  # end
 end
