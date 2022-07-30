@@ -28,7 +28,7 @@ RSpec.describe 'Comments API', type: :request do
     end
   end
 
-  scenario "create comment with correct credentials" do
+  scenario 'create comment with correct credentials' do
     path '/api/v1/users/1/posts/1/comments.json' do
       post 'Creates a Comment' do
         tags 'Comments'
